@@ -1,0 +1,126 @@
+﻿<Page x:Class="MyWpfOsdWizard.Pages.Landing"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" d:DesignHeight="600" d:DesignWidth="800"
+	Title="Landing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!-- Instruction Header -->
+        <TextBlock Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+            Text="Please enter a computer name and set any custom variables.&#x0a;When complete, click Finish."
+                   Margin="0,10,0,10" FontFamily="Segoe UI" FontSize="15" TextAlignment="Center"/>
+        <!-- Rectagle Separator -->
+        <Rectangle Fill="Black" Grid.Row="1" Grid.ColumnSpan="3" Height="3" Margin="0,10,0,10"/>
+        
+        <!-- Computer Name -->
+        <TextBlock Text="Computer Name:" Grid.Row="2"
+                   HorizontalAlignment="Right" VerticalAlignment="Center"
+                   Margin="0,10,0,10" FontFamily="Segoe UI" FontSize="13"/>
+        <!-- Computer Name Input and Validator -->
+        <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="2">
+            <TextBox x:Name="osdComputerName" Width="150" Height="20"
+                     VerticalAlignment="Center" HorizontalAlignment="Left"
+                     TextChanged="osdComputerName_TextChanged"/>
+            <DockPanel LastChildFill="True" x:Name="computerNameErrIcon"
+                       ToolTip="Please enter a Computer Name!">
+                <Border Background="OrangeRed" DockPanel.Dock="Right" Margin="5,0,0,0"
+                        Width="25" Height="25" CornerRadius="5">
+                    <TextBlock Foreground="White" Text="&#xE1DE;" FontFamily="Segoe UI Symbol"
+                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+            </DockPanel>
+        </StackPanel>
+        
+        <!-- Another separator -->
+        <Rectangle Fill="Black" Grid.Row="3" Grid.ColumnSpan="3"
+                   Height="3" Margin="0,10,0,10" />
+        
+        <!-- Custom Variables -->
+        <TextBlock Text="Set Task Sequence Variable Manually:" Grid.Row="4"
+                   HorizontalAlignment="Right" VerticalAlignment="Center"
+                   Margin="0,10,10,10" FontFamily="Segoe UI" FontSize="15" />
+        <TextBlock Text="Variable Name" Grid.Row="5"
+                   HorizontalAlignment="Right" VerticalAlignment="Center"
+                   Margin="0,10,70,10" FontFamily="Segoe UI" FontSize="13" />
+        <TextBlock Text="Variable Value" Grid.Row="5" Grid.Column="2"
+                   HorizontalAlignment="Left" VerticalAlignment="Center"
+                   Margin="20,10,0,10" FontFamily="Segoe UI" FontSize="13" />
+        
+        <!-- Variable One -->
+        <TextBox x:Name="osdVarNameOne" Grid.Row="6" Width="150" Height="20"
+                 HorizontalAlignment="Right" VerticalAlignment="Center"
+                 Margin="10"/>
+        <TextBox x:Name="osdVarValOne" Grid.Row="6" Grid.Column="2"
+                 Width="150" Height="20"
+                 HorizontalAlignment="Left" VerticalAlignment="Center"
+                 Margin="10"/>
+        
+        <!-- Variable Two -->
+        <TextBox x:Name="osdVarNameTwo" Grid.Row="7" Width="150" Height="20"
+                 HorizontalAlignment="Right" VerticalAlignment="Center"
+                 Margin="10"/>
+        <TextBox x:Name="osdVarValTwo" Grid.Row="7" Grid.Column="2"
+                 Width="150" Height="20"
+                 HorizontalAlignment="Left" VerticalAlignment="Center"
+                 Margin="10"/>
+        
+        <!-- Variable Three -->
+        <TextBox x:Name="osdVarNameThree" Grid.Row="8" Width="150" Height="20"
+                 HorizontalAlignment="Right" VerticalAlignment="Center"
+                 Margin="10"/>
+        <TextBox x:Name="osdVarValThree" Grid.Row="8" Grid.Column="2"
+                 Width="150" Height="20"
+                 HorizontalAlignment="Left" VerticalAlignment="Center"
+                 Margin="10"/>
+        
+        <!-- Variable Four -->
+        <TextBox x:Name="osdVarNameFour" Grid.Row="9" Width="150" Height="20"
+                 HorizontalAlignment="Right" VerticalAlignment="Center"
+                 Margin="10"/>
+        <TextBox x:Name="osdVarValFour" Grid.Row="9" Grid.Column="2"
+                 Width="150" Height="20"
+                 HorizontalAlignment="Left" VerticalAlignment="Center"
+                 Margin="10"/>
+        
+        <!-- Variable Five -->
+        <TextBox x:Name="osdVarNameFive" Grid.Row="10" Width="150" Height="20"
+                 HorizontalAlignment="Right" VerticalAlignment="Center"
+                 Margin="10"/>
+        <TextBox x:Name="osdVarValFive" Grid.Row="10" Grid.Column="2"
+                 Width="150" Height="20"
+                 HorizontalAlignment="Left" VerticalAlignment="Center"
+                 Margin="10"/>
+        
+        <!-- Finish Button -->
+        <Button x:Name="finishButton" Grid.Row="11" Grid.Column="2"
+                IsEnabled="False" Height="40" Width="100" Margin="40"
+                HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="Button_Click"
+                >
+            <TextBlock Text="Finish" Margin="0,10,0,10"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                       FontFamily="Segoe UI" FontSize="15"/>
+        </Button>
+                   
+        
+    </Grid>
+</Page>
